@@ -87,36 +87,3 @@ appointment_schema = RelationSchema()
 appointments_schema = RelationSchema(many=True)
 
 
-# class Car(db.Model):
-#     id = db.Column(db.String, primary_key=True)  
-#     make = db.Column(db.String(150), nullable=False)  
-#     model = db.Column(db.String(150), nullable=False)  
-#     year = db.Column(db.String(4), nullable=False)  
-#     # adding extra columns
-#     color = db.Column(db.String(100), nullable=False)
-#     price = db.Column(db.String(50), nullable=False)
-#     owner_token = db.Column(db.String, db.ForeignKey('user.token'), nullable=False) 
-
-
-#     def __init__(self, make, model, year, color, price, owner_token, id=''):
-#         self.id = id or self.set_id()  
-#         self.make = make
-#         self.model = model
-#         self.year = year
-#         self.color = color
-#         self.price = price
-#         self.owner_token = owner_token
-
-#     def __repr__(self):
-#         return f'<Car {self.make} {self.model} - {self.year}>'
-
-
-#     def set_id(self):
-#         return (secrets.token_urlsafe())
-
-# class ContactSchema(ma.Schema):
-#     class Meta:
-#         fields = ['id', 'make','model','year', 'color', 'price']
-
-# car_schema = ContactSchema()
-# cars_schema = ContactSchema(many=True)
